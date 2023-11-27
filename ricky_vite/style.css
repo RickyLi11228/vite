@@ -59,13 +59,13 @@ h3 {
   .card {
   height: 50vh;
   width: 20vw;
-  background-color: rgb(0, 153, 255);
+  background-color: var(--primary);
   border-radius: 20px;
   display: flex;
   align-items: top;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: "10rem auto";
-  box-shadow: 30px 15px 15px rgb(17, 0, 255);
+  box-shadow: 30px 15px 15px var(--secondary);
   transition-delay: 0.2s;
   }  
