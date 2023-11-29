@@ -43,7 +43,7 @@ let fruits = [
     },
     {
         name: "Mango",
-        img: 'https://static.vecteezy.com/system/resources/previews/015/100/096/original/bananas-transparent-background-free-png.png',
+        img: 'https://i.pinimg.com/originals/a3/f9/6b/a3f96b85d302cf3d4f375bbd105fddec.png',
         taste: "sour",
         price: "1$",
     },
