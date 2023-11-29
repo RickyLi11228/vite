@@ -47,5 +47,18 @@ let fruits = [
         taste: "sour",
         price: "1$",
     },
+    {
+        name: "Ginger",
+        img: 'https://assets.stickpng.com/images/5b4eed0cc051e602a568ce0c.png',
+        taste: "spicy",
+        price: "1$",
+    },
+    {
+        name: "Lemon",
+        img: 'https://pngimg.com/d/lemon_PNG25275.png',
+        taste: "sour",
+        price: "1$",
+    },
+    
 ];
 export {fruits};
