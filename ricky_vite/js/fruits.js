@@ -32,7 +32,7 @@ let fruits = [
     {
         name: "Orange",
         img: 'https://pngimg.com/d/orange_PNG791.png',
-        taste: "sweet",
+        taste: "sour",
         price: "1$",
     },
     {
@@ -48,5 +48,4 @@ let fruits = [
         price: "1$",
     },
 ];
-
 export {fruits};
