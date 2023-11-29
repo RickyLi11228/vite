@@ -7,7 +7,8 @@ const DOMSelectors = {
     themeBtn: document.querySelector('.theme-btn'),
     sour: document.querySelector('.sour'),
     sweet: document.querySelector('.sweet'),
-    spicy: document.querySelector('.spicy')
+    spicy: document.querySelector('.spicy'),
+    all: document.querySelector('.all'),
 }
 
 function clearfields(){
@@ -27,8 +28,14 @@ function insertCards(arr){
     });
 }
 
-let firstfruits = fruits.filter((fruits) => fruits.taste != null);
+let firstfruits = fruits.filter((fruits) => fruits.taste != 'null');
 insertCards(firstfruits);
+
+DOMSelectors.all.addEventListener('click', function() {
+    let newArr = fruits.filter((fruit) => fruit.taste != 'null');
+    clearfields();
+    insertCards(newArr);
+});
 
 DOMSelectors.sweet.addEventListener('click', function() {
     let newArr = fruits.filter((fruit) => fruit.taste === 'sweet');

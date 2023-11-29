@@ -49,7 +49,7 @@ let fruits = [
     },
     {
         name: "Ginger",
-        img: 'https://assets.stickpng.com/images/5b4eed0cc051e602a568ce0c.png',
+        img: 'https://www.pngall.com/wp-content/uploads/15/Ginger-No-Background.png',
         taste: "spicy",
         price: "1$",
     },
