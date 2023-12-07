@@ -3,11 +3,10 @@ import {fruits} from "./fruits";
 
 const DOMSelectors = {
     column: document.querySelector(".column"),
-    btn: document.querySelectorAll(".btn"),
     themeBtn: document.querySelector('.theme-btn'),
-    sour: document.querySelector('.sour'),
-    sweet: document.querySelector('.sweet'),
-    spicy: document.querySelector('.spicy'),
+    sour: document.querySelector('#sour'),
+    sweet: document.querySelector('#sweet'),
+    spicy: document.querySelector('#spicy'),
     all: document.querySelector('.all'),
 }
 
@@ -30,7 +29,23 @@ function insertCards(arr){
 
 let firstfruits = fruits.filter((fruits) => fruits.taste != 'null');
 insertCards(firstfruits);
-
+let buttons = document.querySelectorAll('.btn');
+buttons.forEach((btn) =>
+  btn.addEventListener('click', function (event) {
+    event.preventDefault();
+    let type = btn.textContent.toLowerCase();
+    let newArr = fruits.filter((fruit) => fruit.taste === type);
+    clearfields();
+    insertCards(newArr);
+  })
+);
+insertCards(fruits);
+DOMSelectors.all.addEventListener('click', function() {
+    let newArr = fruits.filter((fruit) => fruit.taste != 'null');
+    clearfields();
+    insertCards(newArr);
+});
+/*
 DOMSelectors.all.addEventListener('click', function() {
     let newArr = fruits.filter((fruit) => fruit.taste != 'null');
     clearfields();
@@ -54,6 +69,7 @@ DOMSelectors.spicy.addEventListener('click', function() {
     clearfields();
     insertCards(newArr);
 });
+*/
 
 document.querySelector(".theme-btn").addEventListener("click", function () {
     if (document.body.classList.contains("blue")) {
